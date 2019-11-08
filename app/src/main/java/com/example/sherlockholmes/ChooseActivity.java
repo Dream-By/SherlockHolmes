@@ -1,5 +1,6 @@
 package com.example.sherlockholmes;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -9,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+
+import javax.xml.transform.Result;
 
 public class ChooseActivity extends AppCompatActivity {
 
@@ -30,4 +33,26 @@ public class ChooseActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    public final static String THIEF = "com.example.sherlockholmes";
+
+    public void onRadioClick(View view) {
+        Intent answerIntent = new Intent();
+
+        switch (view.getId()){
+            case R.id.radioDog:
+                answerIntent.putExtra(THIEF, "Это тот самый пёсик");
+                break;
+            case R.id.radioCat:
+                answerIntent.putExtra(THIEF, "Лошадь Пржевальского");
+                break;
+            case R.id.radioCrow:
+                answerIntent.putExtra(THIEF, "Та самая ворона");
+                break;
+
+                default:
+                    break;
+                    }
+                    setResult(RESULT_OK,answerIntent);
+                    finish();
+    }
 }

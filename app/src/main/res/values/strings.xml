@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">SherlockHolmes</string>
-    <string name="title_activity_choose">ChooseActivity</string>
+    <string name="title_activity_choose">Выберите Ответ</string>
 </resources>
