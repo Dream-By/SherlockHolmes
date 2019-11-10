@@ -12,14 +12,14 @@
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:background="#fa2255"
-        android:scaleType="centerCrop"/>
-
-
+        android:scaleType="centerCrop"
+        android:src="@drawable/sherlock" />
 
     <TextView
         android:id="@+id/textViewLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Кто украл два кусочека колбаски?"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView

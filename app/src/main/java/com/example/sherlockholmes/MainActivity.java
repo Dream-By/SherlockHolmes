@@ -22,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(questionIntent, CHOOSE_THIEF);
     }
 
-    protected void OnActivityResult(int requestCode, int resultCode, Intent data){
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         TextView infoTextView = (TextView) findViewById(R.id.textViewInfo);
@@ -31,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
                 String thiefname = data.getStringExtra(ChooseActivity.THIEF);
                 infoTextView.setText(thiefname);
-            }else {
-                infoTextView.setText("");//стираем текст
+            } else {
+                infoTextView.setText(""); // стираем текст
             }
         }
     }
